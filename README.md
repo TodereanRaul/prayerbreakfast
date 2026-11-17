@@ -35,6 +35,17 @@ is switched off.
 
 Sign in at `/admin/login`.
 
+## Deploy
+
+The site is hosted on Vercel (project `prayerbreakfasts`) and linked to this repository:
+every push to `main` deploys to production, and other branches get a preview address.
+
+The Vercel project needs two environment variables, the same as in `.env.local`:
+`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Once the custom domain
+is live, also set `NEXT_PUBLIC_SITE_URL` so link previews use it.
+
+Changes made in the admin do not need a deployment: they appear on the site straight away.
+
 ## How it works
 
 | | |
